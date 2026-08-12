@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>訪問介護つむぎ サブページ ワイヤーフレーム</title>
+<style>
+  body { background:#050505; margin:0; padding:40px 16px; font-family: "Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif; display:flex; flex-direction:column; align-items:center; gap:60px; }
+  .page-label { color:#5a5142; font-size:11px; letter-spacing:3px; margin-bottom:10px; text-transform:uppercase; }
+  .frame { width:420px; background:#0c0c0c; border:1px solid #3a2f18; border-radius:14px; overflow:hidden; }
+  .serif { font-family: "Hiragino Mincho ProN","Yu Mincho",serif; }
+  .gold { color:#c9a457; }
+  .cream { color:#e8d7ab; }
+  .sub { color:#a89a78; }
+  .faint { color:#6b6152; }
+  .divider-flower { text-align:center; color:#8a6f34; font-size:12px; margin:0 0 6px; letter-spacing:8px; }
+  .divider-line { height:1px; background:linear-gradient(90deg, transparent, #c9a457 50%, transparent); margin:0 auto 24px; width:70%; }
+  .section { padding:24px 20px; }
+  .center { text-align:center; }
+  .left { text-align:left; }
+  .btn { display:inline-block; border:1px solid #c9a457; color:#c9a457; font-size:12px; padding:10px 18px; border-radius:2px; margin:0 4px; letter-spacing:1px; }
+  .btn.ghost { border-color:#5a5142; color:#a89a78; }
+  h2 { color:#e8d7ab; font-size:14px; font-weight:600; margin:0 0 4px; letter-spacing:2px; }
+  .eyebrow { color:#8a6f34; font-size:9px; letter-spacing:3px; margin-bottom:6px; text-transform:uppercase; }
+  .lead { color:#8f8368; font-size:11px; line-height:1.8; margin:6px 0 16px; }
+  .card { border:1px solid #3a2f18; border-radius:8px; padding:16px; background:#0f0f0d; }
+  .steps { display:flex; flex-direction:column; gap:10px; }
+  .step { display:flex; align-items:flex-start; gap:12px; border-bottom:1px solid #241d0f; padding-bottom:10px; }
+  .step:last-child { border-bottom:none; padding-bottom:0; }
+  .step .num { color:#c9a457; font-size:14px; font-family:"Hiragino Mincho ProN",serif; width:24px; flex-shrink:0; }
+  .step .label { color:#c9c2b0; font-size:12px; }
+  .step .desc { color:#8f8368; font-size:10px; margin-top:2px; line-height:1.6; }
+  .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .icon-card { border:1px solid #3a2f18; border-radius:6px; padding:12px 6px; text-align:center; background:#0f0f0d; }
+  .icon-card .icon { color:#c9a457; font-size:16px; }
+  .icon-card .label { color:#c9c2b0; font-size:10px; margin-top:6px; }
+  .photo { background:linear-gradient(135deg,#2a2418,#0d0c08); border:1px solid #3a2f18; border-radius:8px; height:100px; display:flex; align-items:center; justify-content:center; color:#5a5142; font-size:10px; }
+  .avatar { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,#2a2418,#0d0c08); border:1px solid #3a2f18; margin:0 auto 8px; display:flex; align-items:center; justify-content:center; color:#5a5142; font-size:9px; }
+  .table-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #1e180d; font-size:10.5px; }
+  .table-row:last-child { border-bottom:none; }
+  .table-row .k { color:#8a6f34; width:80px; flex-shrink:0; }
+  .table-row .v { color:#c9c2b0; text-align:right; }
+  .field { border:1px solid #3a2f18; border-radius:4px; padding:10px 12px; color:#5a5142; font-size:10px; margin-bottom:8px; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:12px 18px; border-bottom:1px solid #241d0f; }
+  .logo-wrap { display:flex; align-items:center; gap:10px; }
+  .logo-wrap img { width:36px; height:36px; object-fit:contain; }
+  footer { padding:18px; border-top:1px solid #3a2f18; text-align:center; }
+  .pagehead { padding:34px 20px 24px; text-align:center; }
+  .pagehead .en { color:#8a6f34; font-size:10px; letter-spacing:4px; margin-bottom:8px; }
+  .pagehead .jp { color:#e8d7ab; font-size:19px; letter-spacing:2px; font-family:"Hiragino Mincho ProN",serif; }
+</style>
+</head>
+<body>
+
+<!-- ========== 1. つむぎについて ========== -->
+<div>
+<div class="page-label">page — つむぎについて</div>
+<div class="frame">
+  <header>
+    <div class="logo-wrap"><img src="assets/logo_emblem.png" alt="誠"><div><div class="gold" style="font-size:10px;">株式会社 誠Group</div><div class="cream" style="font-size:12px; font-weight:600;">訪問介護 つむぎ</div></div></div>
+    <div class="gold" style="font-size:18px;">☰</div>
+  </header>
+
+  <div class="pagehead">
+    <div class="en">ABOUT TSUMUGI</div>
+    <div class="jp">つむぎについて</div>
+  </div>
+  <div class="divider-flower">◆</div>
+  <div class="divider-line"></div>
+
+  <div class="section">
+    <div class="lead left">
+      私たちは、ご利用者様・ご家族・地域・医療・福祉との「つながり」を大切にしながら、安心して在宅生活を送れるよう支援しています。<br><br>
+      「介護をする」のではなく、「人生に寄り添う」ことを使命としています。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="photo">［写真：家族の団らんシーン］</div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">NAME</div><h2>「つむぎ」という名前に込めた想い</h2></div>
+    <div class="card left" style="margin-top:12px;">
+      <div class="sub" style="font-size:10.5px; line-height:1.8;">〈名前の由来・命名の経緯　※代表者確認事項〉</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">WHY US</div><h2>私たちが選ばれる理由</h2></div>
+    <div class="steps" style="margin-top:14px;">
+      <div class="step"><div class="num">01</div><div><div class="label">誠実な対応</div><div class="desc">どんな小さなご相談にも真摯に向き合います</div></div></div>
+      <div class="step"><div class="num">02</div><div><div class="label">迅速な対応</div><div class="desc">新規依頼・緊急対応も可能な限り迅速に対応します</div></div></div>
+      <div class="step"><div class="num">03</div><div><div class="label">多職種との連携</div><div class="desc">ケアマネジャー・相談支援専門員・訪問看護・医療機関との連携を大切にしています</div></div></div>
+      <div class="step"><div class="num">04</div><div><div class="label">自立支援</div><div class="desc">「できない」を増やさず、「できる」を大切にした支援を行います</div></div></div>
+      <div class="step"><div class="num">05</div><div><div class="label">信頼される事業所へ</div><div class="desc">誠実なサービスを積み重ね、地域から信頼される存在を目指しています</div></div></div>
+    </div>
+  </div>
+
+  <div class="section" style="background:#100c05; border-top:1px solid #241d0f; border-bottom:1px solid #241d0f;">
+    <div class="center"><div class="eyebrow">OUR PROMISE</div><h2>私たちのお約束〈10の約束〉</h2></div>
+    <div class="grid2" style="margin-top:14px;">
+      <div class="icon-card"><div class="icon">◐</div><div class="label">笑顔で伺います</div></div>
+      <div class="icon-card"><div class="icon">◑</div><div class="label">相手の立場で考えます</div></div>
+      <div class="icon-card"><div class="icon">◒</div><div class="label">約束を守ります</div></div>
+      <div class="icon-card"><div class="icon">◓</div><div class="label">迅速に行動します</div></div>
+      <div class="icon-card"><div class="icon">◔</div><div class="label">丁寧な言葉遣いを心がけます</div></div>
+      <div class="icon-card"><div class="icon">◕</div><div class="label">清潔感を大切にします</div></div>
+      <div class="icon-card"><div class="icon">◖</div><div class="label">情報共有を徹底します</div></div>
+      <div class="icon-card"><div class="icon">◗</div><div class="label">常に学び続けます</div></div>
+      <div class="icon-card"><div class="icon">◘</div><div class="label">地域とのつながりを大切にします</div></div>
+      <div class="icon-card"><div class="icon">◙</div><div class="label">誠実であり続けます</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">STAFF</div><h2>スタッフ紹介</h2></div>
+    <div class="grid3" style="margin-top:14px;">
+      <div><div class="avatar">写真</div><div class="sub center" style="font-size:9px;">スタッフ名<br>ひとこと</div></div>
+      <div><div class="avatar">写真</div><div class="sub center" style="font-size:9px;">スタッフ名<br>ひとこと</div></div>
+      <div><div class="avatar">写真</div><div class="sub center" style="font-size:9px;">スタッフ名<br>ひとこと</div></div>
+    </div>
+  </div>
+
+  <div class="section center">
+    <span class="btn ghost" style="font-size:10px;">サービスを見る</span>
+    <span class="btn" style="font-size:10px;">まずは相談する</span>
+  </div>
+
+  <footer>
+    <img src="assets/logo_emblem.png" alt="誠" style="width:44px; height:44px; object-fit:contain; margin-bottom:8px;">
+    <div class="gold" style="font-size:10px;">株式会社 誠Group</div>
+    <div class="cream" style="font-size:11px; margin:2px 0 10px;">訪問介護 つむぎ</div>
+    <div class="faint" style="font-size:9px;">Website produced by Minacon,LTD</div>
+  </footer>
+</div>
+</div>
+
+<!-- ========== 2. サービス・ご利用について ========== -->
+<div>
+<div class="page-label">page — サービス・ご利用について</div>
+<div class="frame">
+  <header>
+    <div class="logo-wrap"><img src="assets/logo_emblem.png" alt="誠"><div><div class="gold" style="font-size:10px;">株式会社 誠Group</div><div class="cream" style="font-size:12px; font-weight:600;">訪問介護 つむぎ</div></div></div>
+    <div class="gold" style="font-size:18px;">☰</div>
+  </header>
+
+  <div class="pagehead">
+    <div class="en">SERVICE / HOW TO USE</div>
+    <div class="jp">サービス・ご利用について</div>
+  </div>
+  <div class="divider-flower">◆</div>
+  <div class="divider-line"></div>
+
+  <div class="section">
+    <div class="lead left">
+      訪問介護は、介護や支援を必要とする方が、可能な限りご自宅で自立した日常生活を送れるよう、訪問介護員がご自宅にお伺いするサービスです。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">SERVICE</div><h2>ご利用いただけるサービス</h2></div>
+    <div class="card left" style="margin-top:14px;">
+      <div class="gold" style="font-size:11px; margin-bottom:6px;">介護保険</div>
+      <div class="sub" style="font-size:10px; margin-bottom:12px;">身体介護（食事介助・入浴介助・排泄介助等）／生活援助（掃除・洗濯・買い物・調理等）</div>
+      <div class="gold" style="font-size:11px; margin-bottom:6px;">障害福祉サービス</div>
+      <div class="sub" style="font-size:10px; margin-bottom:12px;">居宅介護／重度訪問介護／同行援護／行動援護</div>
+      <div class="gold" style="font-size:11px; margin-bottom:6px;">地域生活支援事業</div>
+      <div class="sub" style="font-size:10px;">移動支援</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">CHECK</div><h2>こんなお悩みはありませんか</h2></div>
+    <div class="card left" style="margin-top:14px;">
+      <div class="sub" style="font-size:11px; line-height:2.1;">
+        ✓ 退院後の生活に不安がある<br>
+        ✓ 一人暮らしを続けたい<br>
+        ✓ ご家族の介護負担を減らしたい<br>
+        ✓ 障害福祉サービスを利用したい<br>
+        ✓ 急な支援が必要になった
+      </div>
+      <div class="faint" style="font-size:10px; margin-top:10px;">まずはお気軽にご相談ください。</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="photo">［写真：訪問介助の様子］</div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">FLOW</div><h2>ご利用の流れ</h2></div>
+    <div class="steps" style="margin-top:14px;">
+      <div class="step"><div class="num">01</div><div><div class="label">ご相談</div><div class="desc">お電話・フォームでお気軽にご連絡ください</div></div></div>
+      <div class="step"><div class="num">02</div><div><div class="label">ヒアリング</div><div class="desc">ご状況・ご希望を丁寧にお伺いします</div></div></div>
+      <div class="step"><div class="num">03</div><div><div class="label">ご契約</div><div class="desc">内容にご納得いただいた上でご契約</div></div></div>
+      <div class="step"><div class="num">04</div><div><div class="label">サービス開始</div><div class="desc">安心してお任せください</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">PRICE</div><h2>ご利用料金</h2></div>
+    <div class="card left" style="margin-top:14px;">
+      <div class="sub" style="font-size:10.5px; line-height:1.8;">〈介護保険・自費サービスの料金表　※代表者確認事項〉</div>
+      <div class="faint" style="font-size:10px; margin-top:8px;">詳しくはお気軽にお問い合わせください。</div>
+    </div>
+  </div>
+
+  <div class="section" style="background:#100c05; border-top:1px solid #241d0f; border-bottom:1px solid #241d0f;">
+    <div class="center"><div class="eyebrow">FAQ</div><h2>よくあるご質問</h2></div>
+    <div class="steps" style="margin-top:14px;">
+      <div class="step"><div class="num">Q</div><div><div class="label">対応エリア外でも利用できますか？</div><div class="desc">〈回答内容　※代表者確認事項〉</div></div></div>
+      <div class="step"><div class="num">Q</div><div><div class="label">介護保険がなくても利用できますか？</div><div class="desc">〈回答内容　※代表者確認事項〉</div></div></div>
+      <div class="step"><div class="num">Q</div><div><div class="label">急な依頼にも対応できますか？</div><div class="desc">〈回答内容　※代表者確認事項〉</div></div></div>
+    </div>
+  </div>
+
+  <div class="section center">
+    <span class="btn">お気軽にご相談ください</span>
+  </div>
+
+  <footer>
+    <img src="assets/logo_emblem.png" alt="誠" style="width:44px; height:44px; object-fit:contain; margin-bottom:8px;">
+    <div class="gold" style="font-size:10px;">株式会社 誠Group</div>
+    <div class="cream" style="font-size:11px; margin:2px 0 10px;">訪問介護 つむぎ</div>
+    <div class="faint" style="font-size:9px;">Website produced by Minacon,LTD</div>
+  </footer>
+</div>
+</div>
+
+<!-- ========== 3. 会社概要 ========== -->
+<div>
+<div class="page-label">page — 会社概要</div>
+<div class="frame">
+  <header>
+    <div class="logo-wrap"><img src="assets/logo_emblem.png" alt="誠"><div><div class="gold" style="font-size:10px;">株式会社 誠Group</div><div class="cream" style="font-size:12px; font-weight:600;">訪問介護 つむぎ</div></div></div>
+    <div class="gold" style="font-size:18px;">☰</div>
+  </header>
+
+  <div class="pagehead">
+    <div class="en">COMPANY</div>
+    <div class="jp">会社概要</div>
+  </div>
+  <div class="divider-flower">◆</div>
+  <div class="divider-line"></div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">OUTLINE</div><h2>事業所概要</h2></div>
+    <div class="card left" style="margin-top:14px;">
+      <div class="table-row"><div class="k">事業所名</div><div class="v">訪問介護つむぎ</div></div>
+      <div class="table-row"><div class="k">運営会社</div><div class="v">株式会社誠Group</div></div>
+      <div class="table-row"><div class="k">代表者</div><div class="v">〈確認事項〉</div></div>
+      <div class="table-row"><div class="k">所在地</div><div class="v">京都府京都市〇〇区〇〇<br>〈確認事項〉</div></div>
+      <div class="table-row"><div class="k">電話番号</div><div class="v">〈確認事項〉</div></div>
+      <div class="table-row"><div class="k">営業時間</div><div class="v">8:30〜17:30<br>（土日祝も対応可）</div></div>
+      <div class="table-row"><div class="k">事業所番号</div><div class="v">〈確認事項〉</div></div>
+    </div>
+  </div>
+
+  <div class="section" style="background:#100c05; border-top:1px solid #241d0f; border-bottom:1px solid #241d0f;">
+    <div class="center"><div class="eyebrow">MESSAGE</div><h2>社長挨拶</h2></div>
+    <div class="avatar" style="margin-top:14px;">写真</div>
+    <div class="lead left" style="margin-top:12px;">〈社長挨拶メッセージ本文　※代表者確認事項〉</div>
+    <div class="sub center" style="font-size:10px; margin-top:8px;">株式会社誠Group　代表取締役　〈氏名〉</div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">MAKOTO GROUP</div><h2>誠Groupの想い</h2></div>
+    <div class="gold serif center" style="font-size:15px; margin:14px 0;">「誠」を尽くす。</div>
+    <div class="lead left">
+      私たちは、技術だけではなく、人として誠実であることを何より大切にしています。<br><br>
+      ご利用者様、ご家族、関係機関、地域。関わるすべての方との信頼を積み重ね、その先にある安心できる暮らしを支えていきます。
+    </div>
+    <div class="center" style="margin-top:12px;"><span class="btn ghost" style="font-size:10px;">誠Group公式サイトへ</span></div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">ACCESS</div><h2>アクセス</h2></div>
+    <div class="photo" style="margin-top:12px;">［地図］</div>
+  </div>
+
+  <footer>
+    <img src="assets/logo_emblem.png" alt="誠" style="width:44px; height:44px; object-fit:contain; margin-bottom:8px;">
+    <div class="gold" style="font-size:10px;">株式会社 誠Group</div>
+    <div class="cream" style="font-size:11px; margin:2px 0 10px;">訪問介護 つむぎ</div>
+    <div class="faint" style="font-size:9px;">Website produced by Minacon,LTD</div>
+  </footer>
+</div>
+</div>
+
+<!-- ========== 4. 採用情報 ========== -->
+<div>
+<div class="page-label">page — 採用情報</div>
+<div class="frame">
+  <header>
+    <div class="logo-wrap"><img src="assets/logo_emblem.png" alt="誠"><div><div class="gold" style="font-size:10px;">株式会社 誠Group</div><div class="cream" style="font-size:12px; font-weight:600;">訪問介護 つむぎ</div></div></div>
+    <div class="gold" style="font-size:18px;">☰</div>
+  </header>
+
+  <div class="pagehead">
+    <div class="en">RECRUIT</div>
+    <div class="jp">一緒に、人生をつむごう。</div>
+  </div>
+  <div class="divider-flower">◆</div>
+  <div class="divider-line"></div>
+
+  <div class="section">
+    <div class="photo">［写真：スタッフが笑い合う様子］</div>
+  </div>
+
+  <div class="section">
+    <div class="lead left center">
+      誠実さを大切に、一人ひとりの人生に寄り添う仲間を募集しています。未経験からでも、資格取得支援制度でしっかりサポートします。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">WHY TSUMUGI</div><h2>つむぎで働く理由</h2></div>
+    <div class="grid3" style="margin-top:14px;">
+      <div class="icon-card"><div class="icon">◐</div><div class="label">資格取得<br>支援制度</div></div>
+      <div class="icon-card"><div class="icon">◑</div><div class="label">働き方の<br>柔軟さ</div></div>
+      <div class="icon-card"><div class="icon">◒</div><div class="label">チームでの<br>連携体制</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">REQUIREMENTS</div><h2>募集要項</h2></div>
+    <div class="card left" style="margin-top:14px;">
+      <div class="table-row"><div class="k">職種</div><div class="v">〈確認事項〉</div></div>
+      <div class="table-row"><div class="k">雇用形態</div><div class="v">〈確認事項〉</div></div>
+      <div class="table-row"><div class="k">給与</div><div class="v">〈確認事項〉</div></div>
+      <div class="table-row"><div class="k">勤務地</div><div class="v">〈確認事項〉</div></div>
+      <div class="table-row"><div class="k">応募資格</div><div class="v">〈確認事項〉</div></div>
+    </div>
+  </div>
+
+  <div class="section" style="background:#100c05; border-top:1px solid #241d0f; border-bottom:1px solid #241d0f;">
+    <div class="center"><div class="eyebrow">VOICE</div><h2>先輩の声</h2></div>
+    <div class="grid2" style="margin-top:14px;">
+      <div><div class="avatar">写真</div><div class="sub center" style="font-size:9px;">スタッフ名<br>コメント</div></div>
+      <div><div class="avatar">写真</div><div class="sub center" style="font-size:9px;">スタッフ名<br>コメント</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">FLOW</div><h2>応募から入社までの流れ</h2></div>
+    <div class="steps" style="margin-top:14px;">
+      <div class="step"><div class="num">01</div><div><div class="label">エントリー</div></div></div>
+      <div class="step"><div class="num">02</div><div><div class="label">面談・面接</div></div></div>
+      <div class="step"><div class="num">03</div><div><div class="label">内定・入社</div></div></div>
+    </div>
+  </div>
+
+  <div class="section center">
+    <span class="btn">エントリーする</span>
+    <span class="btn ghost">カジュアル面談</span>
+  </div>
+
+  <footer>
+    <img src="assets/logo_emblem.png" alt="誠" style="width:44px; height:44px; object-fit:contain; margin-bottom:8px;">
+    <div class="gold" style="font-size:10px;">株式会社 誠Group</div>
+    <div class="cream" style="font-size:11px; margin:2px 0 10px;">訪問介護 つむぎ</div>
+    <div class="faint" style="font-size:9px;">Website produced by Minacon,LTD</div>
+  </footer>
+</div>
+</div>
+
+<!-- ========== 5. お問い合わせ ========== -->
+<div>
+<div class="page-label">page — お問い合わせ</div>
+<div class="frame">
+  <header>
+    <div class="logo-wrap"><img src="assets/logo_emblem.png" alt="誠"><div><div class="gold" style="font-size:10px;">株式会社 誠Group</div><div class="cream" style="font-size:12px; font-weight:600;">訪問介護 つむぎ</div></div></div>
+    <div class="gold" style="font-size:18px;">☰</div>
+  </header>
+
+  <div class="pagehead">
+    <div class="en">CONTACT</div>
+    <div class="jp">お気軽にご相談ください</div>
+  </div>
+  <div class="divider-flower">◆</div>
+  <div class="divider-line"></div>
+
+  <div class="section">
+    <div class="lead left center">小さなことでも構いません。まずはお話をお聞かせください。</div>
+  </div>
+
+  <div class="section">
+    <div class="card center">
+      <div class="gold" style="font-size:18px; font-family:'Hiragino Mincho ProN',serif;">📞 〈電話番号　※確認事項〉</div>
+      <div class="faint" style="font-size:10px; margin-top:6px;">受付時間 8:30〜17:30（土日祝も対応可）</div>
+    </div>
+  </div>
+
+  <div class="divider-flower">◆</div>
+
+  <div class="section">
+    <div class="center"><div class="eyebrow">FORM</div><h2>フォームでのお問い合わせ</h2></div>
+    <div style="margin-top:14px;">
+      <div class="field">お名前</div>
+      <div class="field">ご連絡先（電話番号／メール）</div>
+      <div class="field">ご相談内容<br><br><br></div>
+      <div class="field">ご希望の連絡方法</div>
+    </div>
+    <div class="center" style="margin-top:14px;"><span class="btn">相談を送る</span></div>
+  </div>
+
+  <footer>
+    <img src="assets/logo_emblem.png" alt="誠" style="width:44px; height:44px; object-fit:contain; margin-bottom:8px;">
+    <div class="gold" style="font-size:10px;">株式会社 誠Group</div>
+    <div class="cream" style="font-size:11px; margin:2px 0 10px;">訪問介護 つむぎ</div>
+    <div class="faint" style="font-size:9px;">Website produced by Minacon,LTD</div>
+  </footer>
+</div>
+</div>
+
+</body>
+</html>
